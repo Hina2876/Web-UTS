@@ -17,6 +17,6 @@
   </div>
   <div class="footer-bottom">
     <p>© {{ date('Y') }} Dapoer Pipin. Semua hak dilindungi.</p>
-    <p>Dibuat untuk pecinta pempek di Palembang</p>
+    <p>Dibuat untuk pecinta pempek di Prabumulih</p>
   </div>
 </footer>
