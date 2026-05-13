@@ -12,7 +12,7 @@
 
     <div class="hero-eyebrow">
       <span class="dot"></span>
-      Spesialis Aneka Pempek Prabumulih
+      Spesialis Aneka Pempek Palembang
     </div>
 
     <h1>

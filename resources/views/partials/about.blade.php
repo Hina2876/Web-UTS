@@ -25,7 +25,9 @@
       <div class="about-features">
 
         <div class="feature-item">
-          <img src="{{ asset('images/fish.png') }}" alt="Ikan">
+          <div class="feature-icon">
+            <img src="{{ asset('images/fish.png') }}" alt="Ikan" style="width:22px;height:22px;object-fit:contain;">
+          </div>
           <div class="feature-body">
             <h4>Ikan Segar Pilihan</h4>
             <p>Bahan baku segar setiap hari agar rasa pempek tetap gurih dan konsisten.</p>
@@ -33,21 +35,25 @@
         </div>
 
         <div class="feature-item">
-          <img src="{{ asset('images/cooking.png') }}" alt="Resep">
-          <div class="feature-body">
-            <h4>Racikan Resep Keluarga</h4>
-            <p>Adonan khas keluarga menghasilkan tekstur lembut dan cita rasa yang unik.</p>
+          <div class="feature-icon">
+            <img src="{{ asset('images/package.png') }}" alt="Ikan" style="width:22px;height:22px;object-fit:contain;">
           </div>
-        </div>
-
-        <div class="feature-item">
-          <img src="{{ asset('images/package.png') }}" alt="Pack">
           <div class="feature-body">
             <h4>Pengemasan Aman & Rapi</h4>
             <p>Dikemas higienis supaya tetap segar, aman dibawa, dan siap dinikmati kapan saja.</p>
           </div>
         </div>
 
+        <div class="feature-item">
+          <div class="feature-icon">
+            <img src="{{ asset('images/cooking.png') }}" alt="Resep" style="width:22px;height:22px;object-fit:contain;">
+          </div>
+          <div class="feature-body">
+            <h4>Racikan Resep Rumahan</h4>
+            <p>Adonan khas keluarga menghasilkan tekstur lembut dan cita rasa yang unik.</p>
+          </div>
+        </div>
+        
       </div>
     </div>
 
@@ -60,26 +66,42 @@
 
         {{-- Sel 1: kiri atas --}}
         <div class="diced-cell">
-        
-          <div class="diced-label">Kapal Selam</div>
+          <img
+            src="{{ asset('images/kakap.jpg') }}"
+            alt="Kakap"
+            class="diced-img diced-bottom-right"
+            loading="lazy"
+          />
         </div>
 
         {{-- Sel 2: kanan atas --}}
         <div class="diced-cell">
-         
-          <div class="diced-label">Lenjer</div>
+          <img
+            src="{{ asset('images/pempek.jpg') }}"
+            alt="Pempek"
+            class="diced-img diced-bottom-left"
+            loading="lazy"
+          />
         </div>
 
         {{-- Sel 3: kiri bawah --}}
         <div class="diced-cell">
-          
-          <div class="diced-label">Adaan</div>
+          <img
+            src="{{ asset('images/rumahan.jpeg') }}"
+            alt="Rebus"
+            class="diced-img diced-top-right"
+            loading="lazy"
+          />
         </div>
 
         {{-- Sel 4: kanan bawah --}}
         <div class="diced-cell">
-          
-          <div class="diced-label">Cuko Khas</div>
+          <img
+            src="{{ asset('images/cuko.jpg') }}"
+            alt="Cuko"
+            class="diced-img diced-top-left"
+            loading="lazy"
+          />
         </div>
 
       </div>{{-- /.about-diced-grid --}}

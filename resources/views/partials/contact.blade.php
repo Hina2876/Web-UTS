@@ -33,33 +33,17 @@
         </div>
         <div class="contact-text-wrap">
           <h4>Telepon / WhatsApp</h4>
-          <p>0813-7757-3903</p>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <div class="contact-ic">
-          <img src="{{ asset('images/facebook.png') }}" alt="Facebook" width="24" height="24">
-        </div>
-        <div class="contact-text-wrap">
-          <h4>Media Sosial</h4>
-          <p>Facebook: @Pipinumisahirah</p>
+          <p>0856 0914 5305</p>
         </div>
       </div>
 
       {{-- Tombol social cepat --}}
       <div class="contact-social-row">
-        <a href="https://wa.me/6281377573903"
+        <a href="https://wa.me/6285609145305"
            class="contact-social-btn"
            target="_blank" rel="noopener noreferrer">
           <img src="{{ asset('images/whatsapp.png') }}" alt="" width="16" height="16">
           WhatsApp
-        </a>
-        <a href="https://www.facebook.com/Pipinumisahirah"
-           class="contact-social-btn"
-           target="_blank" rel="noopener noreferrer">
-          <img src="{{ asset('images/facebook.png') }}" alt="" width="16" height="16">
-          Facebook
         </a>
       </div>
 
