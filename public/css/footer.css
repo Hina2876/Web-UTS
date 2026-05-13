@@ -1,0 +1,115 @@
+/* public/css/footer.css — Dapoer Pipin */
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+  background: #1a6b57;
+  color: #fff;
+  padding: 64px var(--px) 28px;
+  position: relative;
+  overflow: hidden;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  pointer-events: none;
+}
+
+/* ================================================================
+   TOP
+   ================================================================ */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-brand { display: flex; flex-direction: column; }
+.footer-chip {
+  display: inline-flex; align-items: center;
+  margin-bottom: 14px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.9);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .9px; text-transform: uppercase;
+  border-radius: 999px; padding: 5px 12px;
+  width: fit-content;
+}
+.footer-brand .logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; color: #fff;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.footer-brand .logo-text span { color: #a8f0df; }
+.footer-brand p {
+  font-size: 13.5px; color: rgba(255,255,255,0.7);
+  line-height: 1.75; max-width: 300px;
+}
+
+.footer-socials { display: flex; gap: 9px; margin-top: 20px; }
+.social-btn {
+  width: 38px; height: 38px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: grid; place-items: center;
+  text-decoration: none; color: #fff;
+  transition: background .2s, transform .2s;
+}
+.social-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+
+.footer-links { display: flex; flex-direction: column; }
+.footer-links h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; color: #a8f0df;
+  margin-bottom: 14px; font-weight: 700;
+}
+.footer-links a {
+  text-decoration: none; color: rgba(255,255,255,0.68);
+  font-size: 13px; padding: 4px 0;
+  transition: color .2s, transform .2s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: inline-block;
+}
+.footer-links a:hover { color: #fff; transform: translateX(4px); }
+
+/* ================================================================
+   BOTTOM
+   ================================================================ */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  flex-wrap: wrap; gap: 8px;
+}
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+@media (prefers-color-scheme: dark) {
+  footer { background: #104535; }
+}
+@media (prefers-color-scheme: light) {
+  body.night-mode footer { background: #104535; }
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  footer { padding-top: 48px; padding-bottom: 22px; }
+  .footer-brand .logo-text { font-size: 26px; }
+  .footer-brand p { font-size: 13px; }
+}

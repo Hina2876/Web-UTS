@@ -1,0 +1,195 @@
+/* public/css/contact.css — Dapoer Pipin */
+
+/* ================================================================
+   SECTION
+   ================================================================ */
+#contact {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-deep);
+}
+
+/* ================================================================
+   LAYOUT
+   ================================================================ */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 44px;
+}
+
+/* ================================================================
+   INFO CARD
+   ================================================================ */
+.contact-info-card {
+  background: #fff;
+  border: 1px solid rgba(26,158,126,0.1);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+.contact-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--green);
+  border-radius: 0;
+}
+
+.contact-info-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; color: var(--brown);
+  font-weight: 700; margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(26,158,126,0.08);
+}
+
+.contact-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 13px 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: var(--cream);
+  border: 1px solid rgba(26,158,126,0.08);
+  transition: transform .2s, border-color .2s;
+}
+.contact-item:last-child { margin-bottom: 0; }
+.contact-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(26,158,126,0.2);
+}
+
+.contact-ic {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--green-light);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(26,158,126,0.12);
+}
+.contact-ic img { width: 22px; height: 22px; object-fit: contain; }
+
+.contact-item h4 {
+  font-size: 10.5px; font-weight: 700;
+  color: var(--green); text-transform: uppercase;
+  letter-spacing: .8px; margin-bottom: 4px;
+}
+.contact-item p { font-size: 14px; color: var(--brown); font-weight: 500; line-height: 1.5; }
+
+/* Social row */
+.contact-social-row {
+  display: flex; gap: 9px;
+  margin-top: 18px; padding-top: 18px;
+  border-top: 1px solid rgba(26,158,126,0.08);
+}
+.contact-social-btn {
+  flex: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 7px; padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 12.5px; font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(26,158,126,0.18);
+  color: var(--green-dark);
+  background: var(--green-light);
+  transition: background .2s, color .2s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.contact-social-btn:hover { background: var(--green); color: #fff; border-color: transparent; }
+.contact-social-btn img { width: 15px; height: 15px; object-fit: contain; }
+
+/* ================================================================
+   CTA PANEL (MAP)
+   ================================================================ */
+.contact-cta-panel { display: flex; flex-direction: column; gap: 0; }
+.contact-map-wrap { position: relative; }
+.contact-map-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .7px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 7px;
+}
+.contact-map-label::before {
+  content: '';
+  width: 14px; height: 2px;
+  background: var(--green); border-radius: 2px;
+}
+
+.contact-map-embed {
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(26,158,126,0.1);
+  aspect-ratio: 16 / 8;
+  background: var(--cream-deep);
+  position: relative;
+  box-shadow: var(--shadow-soft);
+}
+.contact-map-embed iframe {
+  display: block; width: 100%; height: 100%; border: 0;
+}
+
+.contact-map-badge {
+  position: absolute;
+  bottom: 12px; left: 12px;
+  background: rgba(255,255,255,0.94);
+  border-radius: 9px; padding: 7px 12px;
+  font-size: 11.5px; font-weight: 600;
+  color: var(--brown);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  display: flex; align-items: center; gap: 6px;
+  z-index: 2; pointer-events: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.contact-map-badge span {
+  display: block; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--green);
+  animation: pulseDot 1.8s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: .7; }
+}
+
+/* ================================================================
+   DARK MODE
+   ================================================================ */
+@media (prefers-color-scheme: dark) {
+  #contact { background: #181410; }
+  .contact-info-card { background: #201c18; border-color: rgba(26,158,126,0.15); }
+  .contact-item { background: #181410; border-color: rgba(26,158,126,0.1); }
+  .contact-item:hover { background: #1e2e2a; }
+  .contact-map-badge { background: rgba(20,16,12,0.94); }
+}
+@media (prefers-color-scheme: light) {
+  body.night-mode #contact { background: #1a1612; }
+  body.night-mode .contact-info-card { background: #201c18; border-color: rgba(26,158,126,0.15); }
+  body.night-mode .contact-item { background: #181410; }
+  body.night-mode .contact-item:hover { background: #1e2e2a; }
+  body.night-mode .contact-map-badge { background: rgba(20,16,12,0.94); }
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 1024px) {
+  .contact-inner { gap: 32px; }
+}
+@media (max-width: 900px) {
+  .contact-inner { grid-template-columns: 1fr; gap: 24px; }
+  .contact-cta-panel { order: -1; }
+  .contact-map-embed { aspect-ratio: 16/7; }
+}
+@media (max-width: 640px) {
+  .contact-info-card { padding: 22px 18px; border-radius: 16px; }
+  .contact-ic { width: 40px; height: 40px; }
+  .contact-ic img { width: 18px; height: 18px; }
+  .contact-item p { font-size: 13.5px; }
+  .contact-social-btn { font-size: 12px; padding: 8px 10px; }
+  .contact-map-embed { aspect-ratio: 4/3; border-radius: 14px; }
+}
